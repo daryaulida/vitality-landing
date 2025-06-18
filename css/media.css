@@ -1,0 +1,111 @@
+/* === Адаптив .intro === */
+@media (max-width: 1024px) {
+    .intro__content {
+      align-items: center;
+      padding-block: 4rem;
+      text-align: center;
+    }
+  
+    .intro__title {
+      font-size: clamp(2rem, 6vw, 3rem);
+      text-align: center;
+    }
+  
+    .intro__subtitle {
+      font-size: 1.25rem;
+      max-width: 90%;
+    }
+  
+    .intro__logo-fixed {
+      top: 1rem;
+      left: 1.5rem;
+    }
+  
+    .intro__shape-left {
+      height: 130px;
+      clip-path: polygon(0 100%, 0 0, 70% 100%);
+    }
+  
+    .intro__shape-top {
+      height: 130px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .intro {
+      height: auto;
+      min-height: 100vh;
+      padding-top: 80px;
+    }
+  
+    .intro__content {
+      min-height: auto;
+      padding-block: 3rem;
+    }
+  
+    .intro__title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .intro__subtitle {
+      font-size: 1.1rem;
+    }
+  
+    .intro__logo-fixed {
+      top: 1rem;
+      left: 1rem;
+    }
+  
+    .intro__shape-left {
+      height: 100px;
+      clip-path: polygon(0 100%, 0 0, 85% 100%);
+    }
+  
+    .intro__shape-top {
+      height: 100px;
+    }
+
+  }
+  
+  @media (max-width: 480px) {
+    .intro__title {
+      font-size: 1.75rem;
+    }
+  
+    .intro__subtitle {
+      font-size: 1rem;
+    }
+  
+    .intro__logo-fixed img {
+      height: 36px;
+    }
+  
+    .intro__shape-left {
+      height: 90px;
+      clip-path: polygon(0 100%, 0 0, 95% 100%);
+    }
+  
+    .intro__shape-top {
+      height: 90px;
+    }
+
+
+  }
+
+  @media (max-width: 426px) {
+    .intro__logo-fixed img {
+      height: 34px; /* Чуть меньше, но не крошечное */
+    }
+  
+    .intro__shape-top {
+      height: 130px; /* Уменьшаем, чтобы не занимал много экрана */
+    }
+
+  }
+  
+  @media (max-width: 767px) {
+    .experience__shape-top {
+      display: none;
+    }
+  }

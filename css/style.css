@@ -83,9 +83,11 @@
   
   .intro__logo-fixed img {
     height: clamp(30px, 6vw, 60px);
-    filter: contrast(110%) brightness(110%) drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+    width: auto;
+    max-width: 100%;
     transition: transform 0.3s ease;
   }
+  
   
   .intro__logo-fixed img:hover {
     transform: scale(1.03);
@@ -284,7 +286,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: clamp(4rem, 10vw, 7rem);
+  padding-block: clamp(0.5rem, 8vw, 6rem); /* уменьшили минимальный паддинг */
   text-align: center;
   z-index: 1;
 }
@@ -322,13 +324,13 @@
 
 .about__text {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.2rem, 2.4vw, 1.45rem); /* чуть крупнее */
-  line-height: 1.8;
+  font-size: clamp(1rem, 2vw, 1.3rem); /* уменьшили минимальный размер текста */
+  line-height: 1.7;
   color: #f3f3f3;
-  font-weight: 500; /* делаем текст чуть жирнее */
+  font-weight: 500;
   max-width: 750px;
   margin: 0 auto;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* лёгкая тень для читаемости */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .about__text .accent {
@@ -351,7 +353,7 @@
 /* === OFFER SECTION === */
 .offer {
   background-color: #f9f9f9;
-  padding-block: clamp(5rem, 8vw, 6.5rem);
+  padding-block: clamp(3rem, 8vw, 6.5rem);
 }
 
 .offer__title {
@@ -451,7 +453,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: clamp(5rem, 10vw, 7rem);
+  padding-block: clamp(3rem, 10vw, 7rem);
   color: #fff;
   overflow: hidden;
 }
@@ -640,10 +642,9 @@
 
 
 /* === FAQ SECTION === */
-/* === FAQ SECTION === */
 .faq {
   position: relative;
-  padding-block: clamp(5rem, 10vw, 7rem);
+  padding-block: clamp(3rem, 10vw, 7rem);
   color: #fff;
   overflow: hidden;
 }
