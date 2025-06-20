@@ -28,26 +28,47 @@
     <meta name="keywords"
         content="работа самосвал, перевозки Москва, аренда самосвала, маршруты самосвалов, Виталити перевозки">
     <meta name="author" content="Виталити">
+
+    <!-- intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    
+    <!-- Inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+
 </head>
 
 <body>
 
+
     <section class="intro">
-
+    
         <div class="intro__shape-top"></div>
-
+    
         <div class="intro__bg">
             <video src="img/header-bg.mov" autoplay muted loop playsinline></video>
             <div class="intro__overlay"></div>
         </div>
-
+    
         <div class="intro__shape-left"></div>
-
-
+    
         <header class="intro__logo-fixed">
-            <img src="img/logo.png" alt="Виталити">
+            <a href="https://vtbaza.su/">
+                <img src="img/logo.png" alt="Виталити">
+            </a>
         </header>
-
+    
+        <!-- WhatsApp-контакт -->
+        <div class="intro__contacts">
+            <a href="https://wa.me/79254096802" class="intro__whatsapp" target="_blank" rel="noopener">
+                <strong>+7 <span>(925)</span> 409-68-02</strong>
+                <img src="img/whatsapp.svg" alt="WhatsApp">
+            </a>
+            <a href="mailto:vtbazas@mail.ru" class="intro__email">vtbazas@mail.ru</a>    
+        </div>
+    
         <div class="container">
             <div class="intro__content">
                 <h1 class="intro__title">Работа для владельцев<br>самосвалов и тонаров</h1>
@@ -58,6 +79,7 @@
             </div>
         </div>
     </section>
+    
 
     <section class="experience">
 
@@ -95,46 +117,27 @@
             </p>
         </div>
     </section>
-
-    <!-- <section class="about">
-        <div class="about__overlay"></div>
-        <div class="container small about__text-wrapper">
-            <h2 class="about__title">Кто мы?</h2>
-            <p class="about__text">
-                Компания <strong class="accent">ВИТАЛИТИ</strong> — поставщик нерудных материалов с собственной
-                логистикой.<br>
-                Нам ежедневно нужны <strong class="accent">надежные перевозчики</strong> на самосвалах и тонарках.
-            </p>
-        </div>
-    </section> -->
-      
-      
-      
-      
-      
+ 
     <section class="offer">
         <div class="container small">
             <h2 class="offer__title">Что предлагаем:</h2>
             <ul class="offer__list">
                 <li>
-                    <p><strong>Маршруты:</strong> Москва, МО, Калуга, Тула, Ярославль, Тверь, Владимир</p>
+                    <p><strong>Маршруты:</strong><br> Москва, МО, Калуга, Тула, Ярославль, Тверь, Владимир</p>
                 </li>
                 <li>
-                    <p><strong>Выработка:</strong> до 100 000 ₽ в день (2 рейса по 50 тонн × 5 ₽/тн·км)</p>
+                    <p><strong>Выработка:</strong><br>до 100 000 ₽ в день (2 рейса по 50 тонн × 5 ₽/тн·км)</p>
                 </li>
                 <li>
-                    <p><strong>Оплата:</strong> по ЭДО — на следующий день или 2 раза в неделю (ср/пт)</p>
+                    <p><strong>Оплата:</strong><br> по ЭДО — на следующий день или 2 раза в неделю (ср/пт)</p>
                 </li>
                 <li>
-                    <p><strong>Постоянные заявки:</strong> и маршруты без простоев</p>
+                    <p><strong>Постоянные заявки:</strong><br> и маршруты без простоев</p>
                 </li>
             </ul>
         </div>
     </section>
       
-      
-      
-
     <section class="terms">
         <div class="terms__bg"></div>
         <div class="terms__overlay"></div>
@@ -151,7 +154,7 @@
     <section class="form-section" id="form">
         <div class="container small">
             <h2 class="form-section__title">Оставьте свой WhatsApp — вышлем актуальные маршруты:</h2>
-            <form class="form" action="#" method="post">
+            <form class="form" action="send.php" method="post">
                 <div class="form__fields">
                     <input type="text" name="name" placeholder="Имя" required>
                     <input type="tel" name="phone" placeholder="WhatsApp" required>
@@ -184,15 +187,14 @@
                 <p class="faq__answer">Присылаете учредительные документы, и мы оформляем всё по нашей форме.</p>
             </div>
         </div>
-    </section>
-      
+    </section> 
 
     <section class="cta-form">
         <div class="container small">
             <h2 class="cta-form__title">Уже готовы?</h2>
             <p class="cta-form__subtitle">Заполните форму — начнем сотрудничество сегодня!</p>
     
-            <form class="form" action="#" method="post">
+            <form class="form" action="send.php" method="post">
                 <div class="form__fields">
                     <input type="text" name="name" placeholder="Имя" required>
                     <input type="tel" name="phone" placeholder="WhatsApp" required>
@@ -203,8 +205,16 @@
             <p class="cta-form__note">После заявки мы свяжемся в течение 1 часа</p>
         </div>
     </section>
-    
 
+
+    <button id="scrollToTopBtn" aria-label="Наверх">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+      
+    
     <script src="script.js"></script>
 </body>
 

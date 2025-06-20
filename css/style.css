@@ -7,7 +7,7 @@
 }
 
 .container.small {
-    max-width: 1094px; /*1064+15+15*/
+    max-width: 1094px; 
 }
 
 /* === INTRO SECTION === */
@@ -21,7 +21,6 @@
     justify-content: center;
   }
   
-  /* --- Video background --- */
   .intro__bg {
     position: absolute;
     inset: 0;
@@ -37,7 +36,6 @@
     display: block;
   }
   
-  /* --- Overlay dark --- */
   .intro__overlay {
     position: absolute;
     inset: 0;
@@ -69,11 +67,6 @@
     pointer-events: none;
   }
   
-  
-  
-  
-  
-  /* --- Logo --- */
   .intro__logo-fixed {
     position: absolute;
     top: clamp(1rem, 4vh, 2rem);
@@ -93,7 +86,6 @@
     transform: scale(1.03);
   }
   
-  /* --- Content --- */
   .intro__content {
     position: relative;
     z-index: 5;
@@ -133,8 +125,56 @@
     font-weight: 700;
     color: #ba433b;
   }
+
+
+  .intro__contacts {
+    position: absolute;
+    top: clamp(2.5rem, 7vh, 4.5rem); /* чуть ниже */
+    right: clamp(1.5rem, 5vw, 3rem);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: clamp(0.25rem, 1vh, 0.5rem);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.3rem); /* размер текста */
+    font-weight: 600;
+    color: #fff;
+  }
   
-  /* --- Animation --- */
+  .intro__whatsapp {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.25rem, 0.8vw, 0.5rem);
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: clamp(1.1rem, 2vw, 1.4rem); /* номер телефона */
+  }
+  
+  .intro__whatsapp span {
+    color: #ba433b;
+  }
+  
+  .intro__whatsapp img {
+    width: clamp(28px, 3.2vw, 40px);
+    height: clamp(28px, 3.2vw, 40px);
+  }
+  
+  .intro__email {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: 600;
+    color: #efefef;
+    text-decoration: none;
+  }
+  
+  .intro__email:hover {
+    text-decoration: underline;
+  }
+  
+  
+
+  
   @keyframes fadeUp {
     from {
       opacity: 0;
@@ -153,7 +193,7 @@
   display: flex;
   align-items: center;
   padding-block: clamp(3rem, 8vw, 6rem);
-  background-color: #efefef; /* исправленный цвет фона */
+  background-color: #efefef; 
   position: relative;
   overflow: hidden;
   color: #1a1a1a;
@@ -176,8 +216,6 @@
   pointer-events: none;
 }
 
-
-/* Заголовок */
 .experience__title {
   font-family: 'Russo One', sans-serif;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
@@ -196,7 +234,6 @@
   border-radius: 2px;
 }
 
-/* Список */
 .experience__list {
   list-style: none;
   padding-left: 0;
@@ -231,7 +268,6 @@
   color: #ba433b;
 }
 
-/* Заключительный текст */
 .experience__text {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1rem, 2.2vw, 1.125rem);
@@ -249,7 +285,6 @@
   color: #ba433b;
 }
 
-/* Анимации */
 @keyframes fadeUpList {
   to {
     opacity: 1;
@@ -286,7 +321,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: clamp(0.5rem, 8vw, 6rem); /* уменьшили минимальный паддинг */
+  padding-block: clamp(0.5rem, 8vw, 6rem); 
   text-align: center;
   z-index: 1;
 }
@@ -295,7 +330,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65); /* плотное затемнение */
+  background: rgba(0, 0, 0, 0.65); 
   z-index: 1;
 }
 
@@ -324,7 +359,7 @@
 
 .about__text {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.3rem); /* уменьшили минимальный размер текста */
+  font-size: clamp(1rem, 2vw, 1.3rem);
   line-height: 1.7;
   color: #f3f3f3;
   font-weight: 500;
@@ -338,17 +373,12 @@
   font-weight: 700;
   text-shadow:
     0 0 4px rgba(255, 89, 89, 0.6),
-    0 0 8px rgba(255, 89, 89, 0.3); /* лёгкое красное свечение */
+    0 0 8px rgba(255, 89, 89, 0.3); 
 }
-
-
-
 
 .about__overlay {
   display: none;
 }
-
-
 
 /* === OFFER SECTION === */
 .offer {
@@ -426,26 +456,6 @@
   color: #1a1a1a;
 }
 
-@media (max-width: 1280px) {
-  .offer__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .offer__list {
-    grid-template-columns: 1fr;
-  }
-
-  .offer__list li {
-    min-height: auto;
-  }
-}
-
-
-
-
-
 /* === TERMS SECTION === */
 .terms {
   position: relative;
@@ -458,7 +468,6 @@
   overflow: hidden;
 }
 
-/* Фон */
 .terms__bg {
   position: absolute;
   inset: 0;
@@ -473,14 +482,12 @@
   z-index: 2;
 }
 
-/* Контейнер */
 .terms .container {
   position: relative;
   z-index: 3;
   text-align: center;
 }
 
-/* Заголовок */
 .terms__title {
   font-family: 'Russo One', sans-serif;
   font-size: clamp(2rem, 4vw, 2.75rem);
@@ -499,7 +506,6 @@
   border-radius: 2px;
 }
 
-/* Список */
 .terms__list {
   list-style: none;
   padding: 0;
@@ -541,23 +547,9 @@
   padding-left: 2.5rem;
 }
 
-/* Запрет переноса для последнего элемента */
 .terms__list li:last-child {
   white-space: nowrap;
 }
-
-/* Адаптация для мобильных */
-@media (max-width: 768px) {
-  .terms__list li {
-    font-size: 1rem;
-    padding: 1rem 1.25rem 1rem 2.5rem;
-  }
-
-  .terms__list li:last-child {
-    white-space: normal; /* вернуть перенос при очень узких экранах */
-  }
-}
-
 
 .form-section {
   min-height: 100vh;
@@ -571,7 +563,7 @@
 
 .form-section .container {
   width: 100%;
-  max-width: 800px; /* увеличено */
+  max-width: 800px; 
 }
 
 .form-section__title {
@@ -639,7 +631,6 @@
   color: #444;
   font-family: 'Montserrat', sans-serif;
 }
-
 
 /* === FAQ SECTION === */
 .faq {
@@ -719,9 +710,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-
-
-/* === CTA-FORM SECTION === */
 /* === CTA FORM SECTION === */
 .cta-form {
   background-color: #ba433b;
@@ -802,11 +790,26 @@
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-  .cta-form .form__fields {
-    max-width: 100%;
-    padding-inline: 1rem;
-  }
+.cta-form input[type="tel"] {
+  color: #1a1a1a !important; /* тёмный текст */
+}
+
+.cta-form .iti__selected-dial-code {
+  color: #1a1a1a !important; /* код страны */
+}
+
+.cta-form .iti__input {
+  color: #1a1a1a !important; /* основной инпут */
+}
+
+.iti__country-list {
+  color: #1a1a1a; /* чёрный текст */
+  background-color: #fff; /* белый фон */
+}
+
+.iti__country-name,
+.iti__dial-code {
+  color: #1a1a1a !important;
 }
 
 
@@ -821,5 +824,42 @@
 .reveal-text.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: clamp(20px, 4vw, 36px);
+  right: clamp(16px, 4vw, 28px);
+  width: clamp(40px, 8vw, 52px);
+  height: clamp(40px, 8vw, 52px);
+  background-color: #ba433b;
+  color: #fff;
+  border: none;
+  border-radius: clamp(10px, 2vw, 14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn svg {
+  width: clamp(16px, 4vw, 22px);
+  height: clamp(16px, 4vw, 22px);
+  display: block;
+}
+
+#scrollToTopBtn:hover {
+  transform: translateY(-3px);
+  background-color: #9e362f;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
 }
 
