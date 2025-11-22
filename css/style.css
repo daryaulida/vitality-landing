@@ -129,7 +129,7 @@
 
   .intro__contacts {
     position: absolute;
-    top: clamp(2.5rem, 7vh, 4.5rem); /* чуть ниже */
+    top: clamp(2.5rem, 7vh, 4.5rem); 
     right: clamp(1.5rem, 5vw, 3rem);
     z-index: 5;
     display: flex;
@@ -137,7 +137,7 @@
     align-items: flex-end;
     gap: clamp(0.25rem, 1vh, 0.5rem);
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1rem, 1.8vw, 1.3rem); /* размер текста */
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
     font-weight: 600;
     color: #fff;
   }
@@ -149,7 +149,7 @@
     text-decoration: none;
     color: #fff;
     font-weight: 700;
-    font-size: clamp(1.1rem, 2vw, 1.4rem); /* номер телефона */
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
   }
   
   .intro__whatsapp span {
@@ -791,20 +791,20 @@
 }
 
 .cta-form input[type="tel"] {
-  color: #1a1a1a !important; /* тёмный текст */
+  color: #1a1a1a !important; 
 }
 
 .cta-form .iti__selected-dial-code {
-  color: #1a1a1a !important; /* код страны */
+  color: #1a1a1a !important; 
 }
 
 .cta-form .iti__input {
-  color: #1a1a1a !important; /* основной инпут */
+  color: #1a1a1a !important; 
 }
 
 .iti__country-list {
   color: #1a1a1a; /* чёрный текст */
-  background-color: #fff; /* белый фон */
+  background-color: #fff; 
 }
 
 .iti__country-name,
@@ -813,7 +813,7 @@
 }
 
 
-/* Анимация появления текста при скролле */
+
 .reveal-text {
   opacity: 0;
   transform: translateY(30px);
@@ -862,4 +862,5 @@
   opacity: 1;
   visibility: visible;
 }
+
 
